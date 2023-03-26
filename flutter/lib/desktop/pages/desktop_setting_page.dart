@@ -924,7 +924,7 @@ class _NetworkState extends State<_Network> with AutomaticKeepAliveClientMixin {
               AbsorbPointer(
                 absorbing: locked,
                 child: Column(children: [
-                  server(enabled),
+                  //server(enabled),
                   _Card(title: 'Proxy', children: [
                     _Button('Socks5 Proxy', changeSocks5Proxy,
                         enabled: enabled),
