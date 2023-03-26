@@ -1,4 +1,4 @@
-Name:       rustdesk 
+Name:       zdesk 
 Version:    1.2.0
 Release:    0
 Summary:    RPM package
@@ -18,23 +18,23 @@ The best open-source remote desktop client software, written in Rust.
 
 %install
 mkdir -p %{buildroot}/usr/bin/
-mkdir -p %{buildroot}/usr/lib/rustdesk/
-mkdir -p %{buildroot}/usr/share/rustdesk/files/
-install -m 755 $HBB/target/release/rustdesk %{buildroot}/usr/bin/rustdesk
-install $HBB/libsciter-gtk.so %{buildroot}/usr/lib/rustdesk/libsciter-gtk.so
-install $HBB/res/rustdesk.service %{buildroot}/usr/share/rustdesk/files/
-install $HBB/res/128x128@2x.png %{buildroot}/usr/share/rustdesk/files/rustdesk.png
-install $HBB/res/rustdesk.desktop %{buildroot}/usr/share/rustdesk/files/
-install $HBB/res/rustdesk-link.desktop %{buildroot}/usr/share/rustdesk/files/
+mkdir -p %{buildroot}/usr/lib/zdesk/
+mkdir -p %{buildroot}/usr/share/zdesk/files/
+install -m 755 $HBB/target/release/zdesk %{buildroot}/usr/bin/zdesk
+install $HBB/libsciter-gtk.so %{buildroot}/usr/lib/zdesk/libsciter-gtk.so
+install $HBB/res/zdesk.service %{buildroot}/usr/share/zdesk/files/
+install $HBB/res/128x128@2x.png %{buildroot}/usr/share/zdesk/files/zdesk.png
+install $HBB/res/zdesk.desktop %{buildroot}/usr/share/zdesk/files/
+install $HBB/res/zdesk-link.desktop %{buildroot}/usr/share/zdesk/files/
 
 %files
-/usr/bin/rustdesk
-/usr/lib/rustdesk/libsciter-gtk.so
-/usr/share/rustdesk/files/rustdesk.service
-/usr/share/rustdesk/files/rustdesk.png
-/usr/share/rustdesk/files/rustdesk.desktop
-/usr/share/rustdesk/files/rustdesk-link.desktop
-/usr/share/rustdesk/files/__pycache__/*
+/usr/bin/zdesk
+/usr/lib/zdesk/libsciter-gtk.so
+/usr/share/zdesk/files/zdesk.service
+/usr/share/zdesk/files/zdesk.png
+/usr/share/zdesk/files/zdesk.desktop
+/usr/share/zdesk/files/zdesk-link.desktop
+/usr/share/zdesk/files/__pycache__/*
 
 %changelog
 # let's skip this for now
@@ -48,26 +48,26 @@ case "$1" in
   ;;
   2)
     # for upgrade
-    systemctl stop rustdesk || true
+    systemctl stop zdesk || true
   ;;
 esac
 
 %post
-cp /usr/share/rustdesk/files/rustdesk.service /etc/systemd/system/rustdesk.service
-cp /usr/share/rustdesk/files/rustdesk.desktop /usr/share/applications/
-cp /usr/share/rustdesk/files/rustdesk-link.desktop /usr/share/applications/
+cp /usr/share/zdesk/files/zdesk.service /etc/systemd/system/zdesk.service
+cp /usr/share/zdesk/files/zdesk.desktop /usr/share/applications/
+cp /usr/share/zdesk/files/zdesk-link.desktop /usr/share/applications/
 systemctl daemon-reload
-systemctl enable rustdesk
-systemctl start rustdesk
+systemctl enable zdesk
+systemctl start zdesk
 update-desktop-database
 
 %preun
 case "$1" in
   0)
     # for uninstall
-    systemctl stop rustdesk || true
-    systemctl disable rustdesk || true
-    rm /etc/systemd/system/rustdesk.service || true
+    systemctl stop zdesk || true
+    systemctl disable zdesk || true
+    rm /etc/systemd/system/zdesk.service || true
   ;;
   1)
     # for upgrade
@@ -78,8 +78,8 @@ esac
 case "$1" in
   0)
     # for uninstall
-    rm /usr/share/applications/rustdesk.desktop || true
-    rm /usr/share/applications/rustdesk-link.desktop || true
+    rm /usr/share/applications/zdesk.desktop || true
+    rm /usr/share/applications/zdesk-link.desktop || true
     update-desktop-database
   ;;
   1)

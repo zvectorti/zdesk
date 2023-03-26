@@ -30,7 +30,7 @@ const String kWindowEventHide = "hide";
 const String kWindowEventShow = "show";
 const String kWindowConnect = "connect";
 
-const String kUniLinksPrefix = "rustdesk://";
+const String kUniLinksPrefix = "zdesk://";
 
 const String kTabLabelHomePage = "Home";
 const String kTabLabelSettingPage = "Settings";

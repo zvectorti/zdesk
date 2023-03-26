@@ -34,8 +34,8 @@ use winapi::{
 };
 
 pub const ORIGIN_PROCESS_EXE: &'static str = "C:\\Windows\\System32\\RuntimeBroker.exe";
-pub const INJECTED_PROCESS_EXE: &'static str = "RuntimeBroker_rustdesk.exe";
-pub const PRIVACY_WINDOW_NAME: &'static str = "RustDeskPrivacyWindow";
+pub const INJECTED_PROCESS_EXE: &'static str = "RuntimeBroker_zdesk.exe";
+pub const PRIVACY_WINDOW_NAME: &'static str = "zDeskPrivacyWindow";
 
 pub const GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT: u32 = 2;
 pub const GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS: u32 = 4;

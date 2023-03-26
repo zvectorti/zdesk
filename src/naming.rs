@@ -26,7 +26,7 @@ fn main() {
     };
     if args.len() >= 2 {
         println!(
-            "rustdesk-licensed-{}.exe",
+            "zdesk-licensed-{}.exe",
             gen_name(&License {
                 key: args[0].clone(),
                 host: args[1].clone(),

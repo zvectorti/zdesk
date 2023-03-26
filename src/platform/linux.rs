@@ -239,7 +239,7 @@ fn set_x11_env(uid: &str) {
 
 fn stop_rustdesk_servers() {
     let _ = run_cmds(format!(
-        r##"ps -ef | grep -E 'rustdesk +--server' | awk '{{printf("kill -9 %d\n", $2)}}' | bash"##,
+        r##"ps -ef | grep -E 'zdesk +--server' | awk '{{printf("kill -9 %d\n", $2)}}' | bash"##,
     ));
 }
 
@@ -628,7 +628,7 @@ pub fn quit_gui() {
 }
 
 pub fn check_super_user_permission() -> ResultType<bool> {
-    let file = "/usr/share/rustdesk/files/polkit";
+    let file = "/usr/share/zdesk/files/polkit";
     let arg;
     if Path::new(file).is_file() {
         arg = file;

@@ -1,10 +1,10 @@
 [Desktop Entry]
 Version=1.5
-Name=RustDesk
+Name=zDesk
 GenericName=Remote Desktop
 Comment=Remote Desktop
-Exec=rustdesk %u
-Icon=/usr/share/rustdesk/files/rustdesk.png
+Exec=zdesk %u
+Icon=/usr/share/zdesk/files/zdesk.png
 Terminal=false
 Type=Application
 StartupNotify=true
@@ -16,4 +16,4 @@ X-Desktop-File-Install-Version=0.23
 
 [Desktop Action new-window]
 Name=Open a New Window
-Exec=rustdesk %u
+Exec=zdesk %u

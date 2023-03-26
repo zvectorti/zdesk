@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=zDeskURL Scheme Handler
+NoDisplay=true
+MimeType=x-scheme-handler/zdesk;
+TryExec=zdesk
+Exec=zdesk --connect "%u"
+Icon=zdesk
+Terminal=false
+Type=Application
+StartupNotify=false
+Version=1.5

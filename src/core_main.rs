@@ -290,7 +290,7 @@ fn core_main_invoke_new_connection(mut args: std::env::Args) -> Option<Vec<Strin
     let params_flag = if params.is_empty() { "" } else { "?" };
     #[allow(unused)]
     let uni_links = format!(
-        "rustdesk://connection/new/{}{}{}",
+        "zdesk://connection/new/{}{}{}",
         peer_id, params_flag, params
     );
 
@@ -314,7 +314,7 @@ fn core_main_invoke_new_connection(mut args: std::env::Args) -> Option<Vec<Strin
         use winapi::um::winuser::WM_USER;
         let res = crate::platform::send_message_to_hnwd(
             "FLUTTER_RUNNER_WIN32_WINDOW",
-            "RustDesk",
+            "zDesk",
             (WM_USER + 2) as _, // referred from unilinks desktop pub
             uni_links.as_str(),
             false,

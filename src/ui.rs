@@ -52,7 +52,7 @@ pub fn start(args: &mut [String]) {
         let dir = "/app";
         #[cfg(not(feature = "flatpak"))]
         let dir = "/usr";
-        sciter::set_library(&(prefix + dir + "/lib/rustdesk/libsciter-gtk.so")).ok();
+        sciter::set_library(&(prefix + dir + "/lib/zdesk/libsciter-gtk.so")).ok();
     }
     // https://github.com/c-smile/sciter-sdk/blob/master/include/sciter-x-types.h
     // https://github.com/rustdesk/rustdesk/issues/132#issuecomment-886069737
