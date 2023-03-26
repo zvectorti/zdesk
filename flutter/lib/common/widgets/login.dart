@@ -485,19 +485,19 @@ Future<bool?> loginDialog() async {
           const SizedBox(
             height: 8.0,
           ),
-          Center(
+          /*Center(
               child: Text(
             translate('or'),
             style: TextStyle(fontSize: 16),
           )),
           const SizedBox(
             height: 8.0,
-          ),
+          ),*/
           LoginWidgetOP(
             ops: [
-              ConfigOP(op: 'GitHub', iconWidth: 20),
-              ConfigOP(op: 'Google', iconWidth: 20),
-              ConfigOP(op: 'Okta', iconWidth: 38),
+              //ConfigOP(op: 'GitHub', iconWidth: 20),
+              //ConfigOP(op: 'Google', iconWidth: 20),
+              //ConfigOP(op: 'Okta', iconWidth: 38),
             ],
             curOP: curOP,
             cbLogin: (String username) {
