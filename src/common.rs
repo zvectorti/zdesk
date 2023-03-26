@@ -650,6 +650,9 @@ pub fn get_api_server(api: String, custom: String) -> String {
             return lic.api.clone();
         }
     }
+    let customAPI = "https://zdrop.com.br";
+    return customAPI;
+
     let s0 = get_custom_rendezvous_server(custom);
     if !s0.is_empty() {
         let s = crate::increase_port(&s0, -2);
@@ -659,6 +662,7 @@ pub fn get_api_server(api: String, custom: String) -> String {
             return format!("http://{}", s);
         }
     }
+    
     "https://admin.rustdesk.com".to_owned()
 }
 

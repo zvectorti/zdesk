@@ -1388,7 +1388,7 @@ class _AboutState extends State<_About> {
           child: SingleChildScrollView(
             controller: scrollController,
             physics: DraggableNeverScrollableScrollPhysics(),
-            child: _Card(title: '${translate('About')} RustDesk', children: [
+            child: _Card(title: '${translate('About')} zDesk', children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -1401,20 +1401,23 @@ class _AboutState extends State<_About> {
                   SelectionArea(
                       child: Text('${translate('Build Date')}: $buildDate')
                           .marginSymmetric(vertical: 4.0)),
+                  SelectionArea(
+                      child: Text('Licença: Comercial')
+                          .marginSymmetric(vertical: 4.0)),
                   InkWell(
                       onTap: () {
-                        launchUrlString('https://rustdesk.com/privacy');
+                        launchUrlString('https://zvti.com.br/produtos/zdesk/privacidade');
                       },
                       child: Text(
-                        translate('Privacy Statement'),
+                        translate('Política de Privacidade'),
                         style: linkStyle,
                       ).marginSymmetric(vertical: 4.0)),
                   InkWell(
                       onTap: () {
-                        launchUrlString('https://rustdesk.com');
+                        launchUrlString('https://zvti.com.br/produtos/zdesk');
                       },
                       child: Text(
-                        translate('Website'),
+                        translate('Site do Produto'),
                         style: linkStyle,
                       ).marginSymmetric(vertical: 4.0)),
                   Container(
@@ -1429,7 +1432,7 @@ class _AboutState extends State<_About> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Copyright © 2022 Purslane Ltd.\n$license',
+                                'Copyright © 2023 ZeroVector TI.\n$license',
                                 style: const TextStyle(color: Colors.white),
                               ),
                               Text(
