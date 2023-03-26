@@ -650,8 +650,8 @@ pub fn get_api_server(api: String, custom: String) -> String {
             return lic.api.clone();
         }
     }
-    let customAPI = "https://zdrop.com.br";
-    return customAPI;
+    let customAPI = "zdrop.com.br";
+    return format!("https://{}", customAPI);
 
     let s0 = get_custom_rendezvous_server(custom);
     if !s0.is_empty() {
